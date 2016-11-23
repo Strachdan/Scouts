@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Badges</title>
+    </head>
+    <style>
+        #display{
+            display:flex;
+        }
+   .individual{
+            background-color: #f5f5f5;
+            max-width:300px;
+            text-align: left;
+            margin:10px;
+            padding-top:5px;
+        }
+    </style>
+    <body>
+        <div id="display"></div>
+        <script>
+            function badges(arr){
+                var output='';
+                var i;
+                for (i=0; i< arr.length; i++){
+                    output += '<div class="individual"><p>Badge:&nbsp;'+arr[i].badgename + '</p><img src="' + arr[i].imgsrc +'" title ="' + arr[i].badgename +'"alt= "' +arr[i].badgename + '"><p>How to obtain this badge:&nbsp;' +arr[i].how + '</p></div>';
+                };
+                document.getElementById('display').innerHTML=output;
+            };
+        </script>
+        <script src="badges.js"></script>
+    </body>
+</html>
